@@ -31,13 +31,32 @@
 
     <script>
         function sumar(){
-            var a = document.getElementById("a").value;
-            var b = document.getElementById("b").value;
+
+            //caputrar los valores de los input y guardamos en variables
+            var a = document.getElementById("a").value ;
+            var b = document.getElementById("b").value ;
+
+            //definimos la variable de salida
             var resultado;
 
+            //verificar si las casillas de las variables estan en blanco
+            if(a == "" ){
+                a = 0;
+            }else{
+                a = parseInt( a ) ;
+            }
+
+            if(b == "" ){
+                b = 0;
+            }else{
+                b = parseInt( b );
+            }
+
+            //realizamos la suma
             resultado = a + b;
 
-            document.getElementById("resultado") = resultado;
+            //mostramos el resultado
+            document.getElementById("resultado").value = resultado;
             
         }
     </script>
